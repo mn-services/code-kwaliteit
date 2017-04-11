@@ -17,9 +17,11 @@ Dit document beschrijft een aantal pijlers die zullen leiden tot code van betere
 
 Met codekwaliteit bedoelen we in dit document de eigenschap van code die ook wel "onderhoudbaarheid" wordt genoemd, bijvoorbeeld in ISO 25010. Die eigenschap laat zich weer onderverdelen naar: modulariteit, herbruikbaarheid, analyseerbaarheid, wijzigbaarheid en testbaarheid.
 
-De termen "codekwaliteit" en "onderhoubaarheid" worden in dit document behandeld als synoniemen. Code van goede kwaliteit is onderhoudbaar. En code die onderhoudbaar is, is dus ook van goede kwaliteit. Maar omdat de titel "onderhoudsbaarheidsbeleid" minder goed de lading van dit document zou communiceren naar mogeljke lezers, kiezen we voor de titel "codekwaliteitsbeleid".    
+De termen "codekwaliteit" en "onderhoubaarheid" worden in dit document behandeld als synoniemen. Code van goede kwaliteit is onderhoudbaar. En code die onderhoudbaar is, is dus ook van goede kwaliteit.
 
-Met codekwaliteit bedoelen we nu dus niet de functionele geschiktheid, de efficiency of de security van code. De behandeling van dergelijke aspecten laten we over aan andere stukken.
+Met codekwaliteit bedoelen we nu dus niet de functionele geschiktheid, de architecturele correctheid, de efficiency of de security van code. De behandeling van dergelijke aspecten laten we over aan andere stukken.
+
+Het valt te verwachten dat onderstaande pijlers van het beleid, nader uitgewerkt zullen worden in specifieke standaarden en richtlijnen.
 
 ## Pijler 1: Hou het simpel
 
@@ -46,6 +48,8 @@ Code is begrijpelijk als de lezer van de code gemakkelijk kan begrijpen wat de p
 Elke programmeur wordt wel eens verleid om met een simpele aanpassing een ogenschijnlijk complexe wens te implementeren in een bestaand stuk code. Hoewel dat leidt tot code die op zich "niet logisch" is, weet de programmeur dat het in de praktijk wel goed gaat, omdat de programmeur goed op de hoogte is van de codepaden die daadwerkelijk doorlopen worden. Dergelijke snelle aanpssingen, "clever trics" zoals Dijkstra het noemt, moeten worden vermeden, zij maken de code minder begrijpbaar.  
 
 Als de programmeur verwacht dat ondanks alle moeite de bedoeling van code mogelijk toch niet duidelijk zal zijn aan lezers, en alleen dan, verduidelijkt de programmeur de code met commentaar. Dit is een uiterste optie, het risico is dat het commentaar na wijziging van de code verouderd raakt en de lezer juist de verkeerde kant op stuurt.
+
+Hoewel het mogelijk (en vaak wenselijk) is om code separaat te documenteren in een ontwerptool of wiki, laat dat onverlet dat de code op zichzelf ook leesbaar en begrijpbaar moet zijn. Daarmee kan de documentatie in ontwerptool of wiki zich ook meer richten op de beschrijving van de samenhang van de code met andere stukken code.
 
 ## Pijler 3: Hou rekening met toekomstige verandering
 
