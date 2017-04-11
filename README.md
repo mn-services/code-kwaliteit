@@ -1,5 +1,17 @@
 # Codekwaliteitsbeleid
 
+<!-- TOC depthFrom:2 -->
+
+- [Inleiding en scope](#inleiding-en-scope)
+- [Pijler 1: Hou het simpel](#pijler-1-hou-het-simpel)
+- [Pijler 2: Schrijf leesbare en begrijpbare code](#pijler-2-schrijf-leesbare-en-begrijpbare-code)
+- [Pijler 3: Hou rekening met toekomstige verandering](#pijler-3-hou-rekening-met-toekomstige-verandering)
+- [Pijler 4: Schrijf unit tests](#pijler-4-schrijf-unit-tests)
+- [Pijler 5: Eis collegiale review](#pijler-5-eis-collegiale-review)
+- [Pijler 6: Benader de programmertaak met nederigheid](#pijler-6-benader-de-programmertaak-met-nederigheid)
+
+<!-- /TOC -->
+
 ## Inleiding en scope
 Dit document beschrijft een aantal pijlers die zullen leiden tot code van betere kwaliteit.
 
