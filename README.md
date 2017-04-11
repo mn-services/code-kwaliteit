@@ -12,6 +12,7 @@ Met codekwaliteit bedoelen we nu dus niet de functionele geschiktheid, de effici
 ## Pijler 1: Hou het simpel
 
 > Simple is better than complex
+>
 > Complex is better than complicated
 
 *Tim Peters, "The Zen of Python"*
