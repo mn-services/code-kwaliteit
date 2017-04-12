@@ -35,7 +35,7 @@ De beste kwaliteit die een stuk code kan hebben, is dat het simpel is. Simpele c
 
 Het schrijven van simpele code vereist grote vaardigheid van de programmeur. Analytisch vermogen en uitgebreide kennis van de programmeertaal en het programmeerplatform zijn noodzakelijk. En dan nog zijn er problemen die wezenlijk complex zijn, die zelfs voor de meest vaardige programmeur niet te vangen zijn in simpele code. Complexe code is dan onvermijdbaar maar de programmeur onderneemt alle moeite om die complexiteit zoveel mogelijk te beteugelen.
 
-Generieke codeconstructies lijken in het kader van herbruikbaarheid van code vaak mooi maar zij zijn ook vaak complex. Tevens blijken generieke oplossingen vaak toch niet zo generiek te zijn wanneer ze geconfronteerd worden met nieuwe specifieke problemen. Codeer daarom alleen generieke constructies als je zeker weet dat er sprake zal zijn van hergebruik en dat het de extra complexiteit ruimschoots waard is. Liever twee stukken simpele code die iets vergelijkbaars doen dan één stuk complexe generieke code.
+Generieke codeconstructies lijken in het kader van herbruikbaarheid van code vaak mooi maar zij zijn ook vaak complex. Tevens blijken generieke oplossingen vaak toch niet zo generiek te zijn wanneer ze geconfronteerd worden met nieuwe specifieke problemen. Codeer daarom alleen generieke constructies als je zeker weet dat er sprake zal zijn van hergebruik en dat dit de extra complexiteit ruimschoots waard is. Liever twee stukken simpele code die iets vergelijkbaars doen dan één stuk complexe generieke code.
 
 ## Pijler 2: Schrijf leesbare en begrijpbare code 
 
