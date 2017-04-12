@@ -21,7 +21,7 @@ De termen "codekwaliteit" en "onderhoubaarheid" worden in dit document behandeld
 
 Met codekwaliteit bedoelen we nu dus niet de functionele geschiktheid, de architecturele correctheid, de efficiency of de security van code. De behandeling van dergelijke aspecten laten we over aan andere stukken.
 
-Het valt te verwachten dat onderstaande pijlers van het beleid, nader uitgewerkt zullen worden in specifieke standaarden en richtlijnen.
+Het valt te verwachten dat onderstaande pijlers nader uitgewerkt zullen worden in specifieke standaarden en richtlijnen.
 
 ## Pijler 1: Hou het simpel
 
@@ -33,7 +33,7 @@ Het valt te verwachten dat onderstaande pijlers van het beleid, nader uitgewerkt
 
 De beste kwaliteit die een stuk code kan hebben, is dat het simpel is. Simpele code is gemakkelijk te doorgronden door andere programmeurs, gemakkelijk opnieuw te gebruiken in andere context, gemakkelijk te testen, en bovenal, gemakkelijk te wijzigen.
 
-Het schrijven van simpele code vereist grote vaardigheid van de programmeur. Analytisch vermogen is nodig om het concrete probleem te zien in een abstracte weergave, zodat het op te lossen is met de juiste code. Ook is uitgebreide kennis van de programmeertaal en het programmeerplatform noodzakelijk. Niet elke programmeur kan simpele code schrijven. Steker nog, niet elke programmeur kan dit leren. En dan nog zijn er problemen die wezenlijk complex zijn, die zelfs voor de meest vaardige programmeur niet te vangen zijn in simpele code. Complexe code is dan onvermijdbaar maar de programmeur onderneemt alle moeite om die complexiteit zoveel mogelijk te beteugelen.
+Het schrijven van simpele code vereist grote vaardigheid van de programmeur. Analytisch vermogen en uitgebreide kennis van de programmeertaal en het programmeerplatform zijn noodzakelijk. En dan nog zijn er problemen die wezenlijk complex zijn, die zelfs voor de meest vaardige programmeur niet te vangen zijn in simpele code. Complexe code is dan onvermijdbaar maar de programmeur onderneemt alle moeite om die complexiteit zoveel mogelijk te beteugelen.
 
 ## Pijler 2: Schrijf leesbare en begrijpbare code 
 
@@ -41,13 +41,13 @@ Het schrijven van simpele code vereist grote vaardigheid van de programmeur. Ana
 
 *Edgser Dijkstra, "The Humble Programmer"*
 
-Een belangrijk inzicht is dat veel meer tijd (10x meer) wordt besteed aan het lezen van code dan aan het schrijven van code. Het is de inspanning dus ruimschoots waard om code te schrijven die leesbaar en begrijpelijk is. Nota bene, dus niet alleen leesbaar, maar ook begrijpelijk. Begrijpelijke code is makkelijker aan te passen. Begrijpelijke code is makkelijker te scannen op mogelijke fouten door collega's van de programmeur.
+Een belangrijk inzicht is dat veel meer tijd (10x meer) wordt besteed aan het lezen van code dan aan het schrijven van code. Begrijpelijke code is makkelijker aan te passen. Begrijpelijke code is makkelijker te scannen op mogelijke fouten door collega's van de programmeur. Het is de inspanning dus ruimschoots waard om code te schrijven die leesbaar en begrijpelijk is.
 
-Code is begrijpelijk als de lezer van de code gemakkelijk kan begrijpen wat de programmeur die de code schreef, probeert te doen. Bij het lezen van de code moet de bedoeling van de code als vanzelf duidelijk worden aan de lezer. Een belangrijke manier om dat te bereiken is door betekenisvolle namen te gebruiken voor variabelen, methodes en modules. Namen die de lading dekken. Een andere belangrijk hulpmiddel is de toepassing van consistentie bij het kiezen van namen en oplossingsconstructies. Consistentie verhoogt de herkenbaarheid van namen en constructies en daarmee de begrijpelijkheid van de code. 
+Code is begrijpelijk als de lezer van de code gemakkelijk kan begrijpen wat de programmeur die de code schreef, probeert te doen. Bij het lezen van de code moet de bedoeling van de code als vanzelf duidelijk worden aan de lezer. Gebruik daarom betekenisvolle namen voor variabelen, methodes en modules. Namen die de lading dekken. Wees consistent in naamgeving en bij het kiezen van oplossingsconstructies. Consistentie verhoogt de herkenbaarheid van namen en constructies en daarmee de begrijpelijkheid van de code. 
 
 Elke programmeur wordt wel eens verleid om met een simpele aanpassing een ogenschijnlijk complexe wens te implementeren in een bestaand stuk code. Hoewel dat leidt tot code die op zich "niet logisch" is, weet de programmeur dat het in de praktijk wel goed gaat, omdat de programmeur goed op de hoogte is van de codepaden die daadwerkelijk doorlopen worden. Dergelijke snelle aanpassingen, "clever trics" zoals Dijkstra het noemt, moeten natuurlijk worden vermeden, zij maken de code minder begrijpbaar.  
 
-Als de programmeur verwacht dat ondanks alle moeite de bedoeling van code mogelijk toch niet duidelijk zal zijn aan lezers, en alleen dan, verduidelijkt de programmeur de code met commentaar. Dit is een uiterste optie, het risico is dat het commentaar na wijziging van de code verouderd raakt en de lezer juist de verkeerde kant op stuurt.
+Als de programmeur verwacht dat ondanks alle moeite de bedoeling van code mogelijk toch niet duidelijk zal zijn aan lezers, verduidelijkt de programmeur de code met commentaar. Het commentaar moet met zorg up-to-date worden gehouden bij latere aanpassingen van de code.
 
 Hoewel het mogelijk (en vaak wenselijk) is om code separaat te documenteren in een ontwerptool of wiki, laat dat onverlet dat de code op zichzelf ook leesbaar en begrijpbaar moet zijn. Daarmee kan de documentatie in ontwerptool of wiki zich ook meer richten op de beschrijving van de samenhang van de code met andere stukken code.
 
