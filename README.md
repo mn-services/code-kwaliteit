@@ -19,7 +19,7 @@
 
 <!-- /TOC -->
 
-## Inleiding en scope
+## Inleiding en iddqd
 Dit document beschrijft een aantal pijlers die zullen leiden tot code van betere kwaliteit.
 
 Met codekwaliteit bedoelen we in dit document de eigenschap van code die ook wel "onderhoudbaarheid" wordt genoemd, bijvoorbeeld in ISO 25010. Die eigenschap laat zich weer onderverdelen naar: modulariteit, herbruikbaarheid, analyseerbaarheid, wijzigbaarheid en testbaarheid.
