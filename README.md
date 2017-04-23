@@ -2,24 +2,19 @@
 
 <!-- TOC depthFrom:2 -->
 
-- [Inleiding en scope](#inleiding-en-scope)
+- [Inleiding](#inleiding)
 - [Pijler 1: Hou het simpel](#pijler-1-hou-het-simpel)
 - [Pijler 2: Schrijf leesbare en begrijpbare code](#pijler-2-schrijf-leesbare-en-begrijpbare-code)
-- [Pijler 3: Hou rekening met toekomstige verandering, maar niet teveel](#pijler-3-hou-rekening-met-toekomstige-verandering-maar-niet-teveel)
+- [Pijler 3: Programmeer agile, één stap tegelijk](#pijler-3-programmeer-agile-één-stap-tegelijk)
 - [Pijler 4: Schrijf unit tests](#pijler-4-schrijf-unit-tests)
-- [Pijler 5: Eis collegiale review](#pijler-5-eis-collegiale-review)
-- [Pijler 6:](#pijler-6)
-- [Help mij, jou te helpen, ons allemaal te helpen](#help-mij-jou-te-helpen-ons-allemaal-te-helpen)
-- [Blijf jezelf ontwikkelen en help anderen in hun ontwikkeling](#blijf-jezelf-ontwikkelen-en-help-anderen-in-hun-ontwikkeling)
-- [Blijf leren en help anderen te leren](#blijf-leren-en-help-anderen-te-leren)
-- [Help jezelf en anderen een betere programmeur te worden](#help-jezelf-en-anderen-een-betere-programmeur-te-worden)
-- [Verrijk naast jezelf ook anderen](#verrijk-naast-jezelf-ook-anderen)
-- [Blijf leren](#blijf-leren)
-- [Blijf jezelf ontwikkelen](#blijf-jezelf-ontwikkelen)
+- [Pijler 5: Eet exceptions niet op](#pijler-5-eet-exceptions-niet-op)
+- [Pijler 6: Eis collegiale review](#pijler-6-eis-collegiale-review)
+- [Pijler 7: Houd het vak in leven](#pijler-7-houd-het-vak-in-leven)
+- [Toegift](#toegift)
 
 <!-- /TOC -->
 
-## Inleiding en iddqd
+## Inleiding
 Dit document beschrijft een aantal pijlers die zullen leiden tot code van betere kwaliteit.
 
 Met codekwaliteit bedoelen we in dit document de eigenschap van code die ook wel "onderhoudbaarheid" wordt genoemd, bijvoorbeeld in ISO 25010. Die eigenschap laat zich weer onderverdelen naar: modulariteit, herbruikbaarheid, analyseerbaarheid, wijzigbaarheid en testbaarheid.
@@ -28,7 +23,7 @@ De termen "codekwaliteit" en "onderhoubaarheid" worden in dit document behandeld
 
 Met codekwaliteit bedoelen we nu dus niet de functionele geschiktheid, de architecturele correctheid, de efficiency of de security van code. De behandeling van dergelijke aspecten laten we over aan andere stukken.
 
-Het valt te verwachten dat onderstaande pijlers nader uitgewerkt zullen worden in specifieke standaarden en richtlijnen.
+Het valt te verwachten dat onderstaande pijlers nader uitgewerkt zullen worden in specifieke standaarden en richtlijnen, voor de specifieke programmertalen die van toepassing zijn.
 
 ## Pijler 1: Hou het simpel
 
@@ -38,13 +33,25 @@ Het valt te verwachten dat onderstaande pijlers nader uitgewerkt zullen worden i
 
 *Tim Peters, "The Zen of Python"*
 
-De beste kwaliteit die een stuk code kan hebben, is dat het simpel is. Simpele code is gemakkelijk te doorgronden door andere programmeurs, gemakkelijk opnieuw te gebruiken in andere context, gemakkelijk te testen, en bovenal, gemakkelijk te wijzigen.
+De beste kwaliteit die een stuk code kan hebben, is dat het simpel is. Simpele code is gemakkelijk te doorgronden door andere programmeurs, gemakkelijk opnieuw te gebruiken in andere context, gemakkelijk te testen, gemakkelijk te wijzigen.
 
-Het schrijven van simpele code vereist grote vaardigheid van de programmeur. Analytisch vermogen en uitgebreide kennis van de programmeertaal en het programmeerplatform zijn noodzakelijk. En dan nog zijn er problemen die wezenlijk complex zijn, die zelfs voor de meest vaardige programmeur niet te vangen zijn in simpele code. Complexe code is dan onvermijdbaar maar de programmeur onderneemt alle moeite om die complexiteit zoveel mogelijk te beteugelen.
+Het schrijven van simpele code vereist grote vaardigheid. Analytisch vermogen en uitgebreide kennis van de programmeertaal en het programmeerplatform zijn noodzakelijk. En dan nog zijn er problemen die wezenlijk complex zijn, die zelfs voor de meest vaardige programmeur niet te vangen zijn in simpele code. Complexe code is dan onvermijdbaar maar onderneem alle moeite om die complexiteit zoveel mogelijk te beteugelen.
+
+Code simpel houden is een kunst maar er zijn vuistregels die helpen:
+
+* Schrijf korte stukken code. Knip grotere stukken code op in kleine simpele delen.
+
+* Ga niet verder dan 3 niveau's van geneste if-statements.
+
+* Zorg dat elke methode (/procedure /functie) maar 1 ding doet, 1 duidelijke verantwoordelijkheid heeft.
 
 Generieke codeconstructies lijken in het kader van herbruikbaarheid van code vaak mooi maar zij zijn ook vaak complex. Tevens blijken generieke oplossingen vaak toch niet zo generiek te zijn wanneer ze geconfronteerd worden met nieuwe specifieke problemen. Codeer daarom alleen generieke constructies als je zeker weet dat er sprake zal zijn van hergebruik en dat dit de extra complexiteit ruimschoots waard is. Liever twee stukken simpele code die iets vergelijkbaars doen dan één stuk complexe generieke code.
 
-## Pijler 2: Schrijf leesbare en begrijpbare code 
+## Pijler 2: Schrijf leesbare en begrijpbare code
+
+> “Good code is its own best documentation. As you’re about to add a comment, ask yourself, "How can I improve the code so that this comment isn’t needed?" Improve the code and then document it to make it even clearer
+
+*Steve McConnell, "Code Complete"*
 
 > The competent programmer avoids clever tricks like the plague
 
@@ -54,17 +61,29 @@ Een belangrijk inzicht is dat veel meer tijd (10x meer) wordt besteed aan het le
 
 Code is begrijpelijk als de lezer van de code gemakkelijk kan begrijpen wat de programmeur die de code schreef, probeert te doen. Bij het lezen van de code moet de bedoeling van de code als vanzelf duidelijk worden aan de lezer. Gebruik daarom betekenisvolle namen voor variabelen, methodes en modules. Namen die de lading dekken. Wees consistent in naamgeving en bij het kiezen van oplossingsconstructies. Consistentie verhoogt de herkenbaarheid van namen en constructies en daarmee de begrijpelijkheid van de code.
 
-Elke programmeur wordt wel eens verleid om met een simpele aanpassing een ogenschijnlijk complexe wens te implementeren in een bestaand stuk code. Hoewel dat leidt tot code die op zich "niet logisch" is, weet de programmeur dat het in de praktijk wel goed gaat, omdat de programmeur goed op de hoogte is van de codepaden die daadwerkelijk doorlopen worden. Dergelijke snelle aanpassingen, "clever trics" zoals Dijkstra het noemt, moeten natuurlijk worden vermeden, zij maken de code minder begrijpbaar.  
+Elke programmeur wordt wel eens verleid om met een "slimmige" aanpassing een ogenschijnlijk complexe wens te implementeren in een bestaand stuk code. Hoewel dat leidt tot code die op zich "niet logisch" is, denkt de programmeur te weten dat het in de praktijk wel goed gaat, omdat de programmeur goed op de hoogte is van de codepaden die daadwerkelijk doorlopen worden. Vermijd dergelijke "clever trics" zoals Dijkstra het noemt, zij maken de code minder begrijpbaar.  
 
-Als de programmeur verwacht dat ondanks alle moeite de bedoeling van code mogelijk toch niet duidelijk zal zijn aan lezers, verduidelijkt de programmeur de code met commentaar. Het commentaar moet met zorg up-to-date worden gehouden bij latere aanpassingen van de code.
+Als je verwacht dat ondanks alle moeite de bedoeling van je code mogelijk toch niet duidelijk zal zijn aan lezers, verduidelijk de code dan met commentaar. Het commentaar moet met zorg up-to-date worden gehouden bij latere aanpassingen van de code.
 
 Hoewel het mogelijk (en vaak wenselijk) is om code separaat te documenteren in een ontwerptool of wiki, laat dat onverlet dat de code op zichzelf ook leesbaar en begrijpbaar moet zijn. Daarmee kan de documentatie in ontwerptool of wiki zich ook meer richten op de beschrijving van de samenhang van de code met andere stukken code.
 
-## Pijler 3: Hou rekening met toekomstige verandering, maar niet teveel
+## Pijler 3: Programmeer agile, één stap tegelijk
 
 > When faced with two or more alternatives that deliver roughly the same value, take the path that makes future change easier
 
 *Dave Thomas, "Agile is dead (long live agility)"*
+
+> Be mindful of the future, but never at the expense of the moment
+
+*Qui-Gon Jinn, "Star Wars: Episode I - The Phantom Menace"*
+
+De grote kunst van het programmeren is om "nu" alleen te coderen wat "nu" nodig maar de code zo te schrijven zodat "later" eenvoudig gecodeerd kan worden wat "later" nodig is.
+
+Vele programmeurs zijn met de beste bedoelingen in de valkuil gestapt om code te generiek en te herbruikbaar op te zetten, wat later niet bruikbaar bleek. Of in de andere valkuil, met mindere bedoelingen, om snelle code te schrijven die nu werkt maar latere aanpassingen van het systeem moeilijk zullen maken.
+
+Codeer niet meer dan wat de huidige user story vraagt, en als je de oplossing op meerdere manieren kunt coderen, kies dan de manier die later het gemakkelijkst aan te passen zal zijn.
+
+Vermijd in het geheel "nu" generieke/herbruikbare oplossingen te maken als dat (veel) meer tijd kost dan simpelweg "nu" coderen wat "nu" nodig is.
 
 ## Pijler 4: Schrijf unit tests
 
@@ -72,57 +91,93 @@ Hoewel het mogelijk (en vaak wenselijk) is om code separaat te documenteren in e
 
 *Edsger Dijkstra, "Notes on Structured Programming"*
 
-Bij het bouwen van een stuk functionaliteit kan ‘kijken of het werkt’ al snel voldoende controle lijken om op te gaan leveren. Het gebruik van extra controlemiddelen gaat je code bovendien niet beter laten werken. Als het je enige en laatste code voor je applicatie betreft is daarmee de kous inderdaad af. Grotere applicaties kennen echter complexere logica waar ‘kijken of het werkt’ betekent dat je onvolledig test,  of dat je een explosief groeiend aantal testgevallen met de hand na moet gaan on er zeker van te zijn dat er niet iets omgevallen is. 
+Codeer niet alleen "de code zelf" maar codeer ook unit tests: stukjes code die jouw code testen. Door het schrijven van unit tests denk je beter na over je code en overtuig je jezelf en collega's van de correctheid van die code. De unit tests moeten eenvoudig en snel herhaalbaar zijn, zodat bij volgende aanpassingen kan worden vastgesteld dat eerder gerealiseerde code nog steeds werkt zoals jij toen voor ogen had. Draai alle unit tests van het stuk code dat onder handen is bij aanpassingen van de code.
 
-Het schrijven van tests kan een ongeïnspireerd stuk nageboorte lijken na het creatievere ontwikkelen. Het doet al helemaal oneerbiedig aan als je zeker weet dat je code werkt, bijvoorbeeld door gebrek aan complexiteit. Er kan echter doorgebouwd worden op de huidige code. Daardoor kunnen er bugs geïntroduceerd worden. Er hoeft ontwikkelaars niet verteld te worden dat bijna alles te verkiezen valt boven de krankzinnigheid dat handmatig debuggen met zich meebrengt.
+Bij het bouwen van een stuk functionaliteit kan 'kijken of het werkt' al snel voldoende controle lijken om op te gaan leveren. Echter, serieuze applicaties kennen complexere logica waar 'kijken of het werkt' betekent dat je onvolledig test, of dat je een explosief groeiend aantal testgevallen met de hand na moet gaan on er zeker van te zijn dat er niet iets omgevallen is. Dat is natuurlijk onwenselijk.
 
-Testen zorgt er niet alleen voor dat je bestaande problemen herkent, je smoort ook nieuwe problemen in de kiem. Zonder tests groeien applicaties vaak tot een ondoorzichtig en moeilijk te lezen geheel. Ook je eigen code kan achteraf soms moeilijk door te akkeren zijn. Als er echter goede tests geschreven zijn, zijn er garanties af te geven over de werking van je code. Als er nieuwe functionaliteit wordt gebouwd en je unit tests gaan rinkelen, dan weet je dat er een bug is ontstaan omdat je unit tests alleen valide scenario’s doorlaten. Daarbovenop weet je precies welk component je nieuwe code bijt. 
+Unit tests kunnen direct vanaf het beginstadium van een applicatie worden opgesteld. In dit stadium is de code goed te overzien, en kan het schrijven van automatisch herhaalbare tests zelfs overbodig lijken. Met het oog op de toekomst is het echter een goed idee om er meteen mee te beginnen. Fouten die worden geïntroduceerd zijn door het bijhouden van de tests snel te vinden. Handmatig debuggen als een fout optreedt is moeilijker en kost veel meer tijd. Fouten oplossen met unit tests is dus goedkoper dan zonder tests, mits ze goed zijn opgesteld en vaak worden gedraaid. Unit tests moeten een goede dekking van het systeem bieden. Ze moeten eenvoudig opgesteld zijn, zodat ze makkelijk te begrijpen, te onderhouden en te repareren zijn. 
 
->> Refactoren is gemakkelijker als er goede unit tests. Dat dat past ook bij Agile.
+Indien je applicatie de tand des tijds dient te doorstaan, is het nodig om geregeld te refactoren. Gerefactorde code introduceert soms ook ongewenst gedrag. Met goede unit tests zijn de oorzaken van die problemen snel te achterhalen; de idempotentie van het herbouwde stuk code is immers direct te herleiden tot concrete testgevallen. Testen helpt daarom uitwisselbaarheid van delen van de applicatie te vergroten. Als de unit tests een hele keten beslaan dwingen ze bovendien een ontkoppelde, flexibelere architectuur af.
 
-## Pijler 5: Eis collegiale review
+## Pijler 5: Eet exceptions niet op
 
+> I truly wish we didn't even support WHEN OTHERS. 
+>
+> You should only catch the exceptions you are expecting and can do something about. Let the others propagate out so you can detect them (so you see them)
 
-Omdat leden van een ontwikkelteam elkaars werk bekijken, zullen zij beter op de hoogte zijn van de veranderingen in de systemen. Hierdoor wordt kennis over alle onderdelen van een project, user story etc  breder gedragen.
+*Tom Kyte, "asktom.oracle.com"*
 
-Vier ogen zien meer dan twee. Bovendien is het een stuk gemakkelijker om problemen te vinden in de code van iemand anders dan tijdens het schrijven van je eigen code. Een reviewer bekijkt de code vanuit zijn eigen perceptie van de functionele systemen en de techniek en zal daardoor sneller problemen detecteren dan de auteur zelf. Daardoor zal het aantal fouten afnemen, wat leidt tot kwalitatief betere software.
+Schrijf alleen foutafhandeling voor specifieke fouten die je van te voren al verwacht en die je gepast kunt afhandelen (dat laatste kan per definitie alleen voor fouten die je verwacht). Laat voor andere gevallen de exception omhoog propageren naar aanroepers zodat zij er niet omheen kunnen dat er iets mis is gegaan - en er dus ook over na moeten denken hoe ermee om te gaan.
 
-Mensen leveren netter werk wanneer ze weten dat het door anderen wordt beoordeeld. De code wordt daarom netter, beter gestructureerd en onderhoudbaar, vollediger gedocumenteerd en uitgebreider getest.
+Vermijd het gebruik van generieke foutafhandeling als "catch all" en "exception when others". Zij eten fouten op en verhullen dat er sprake was van een exception: een recept voor obscure bugs.
 
-Door het kijken naar de programmercode van anderen kan een ontwikkelaar veel leren. Het gaat niet alleen om nieuwe oplossingen, maar ook handigheden die anderen hebben ontdekt of ontwikkeld.
+Alleen in de buitenste lagen van het systeem (scherm, batchjob, publieke API) zijn "catch all"-achtige constructies soms niet te vermijden, om te voorkomen dat een individueel foutgeval het hele programma doet crashen. Generieke foutafhandeling kan dan worden toegepast, mits er logging wordt gedaan, zodat jouw team en jij op de hoogte worden gesteld van de "bug".
 
-Onderlinge kennisdeling en controle draagt bij aan een gedeelde verantwoordelijkheid over alle onderdelen van het project en een goede samenwerking binnen het team (bijkomend voordeel).
+## Pijler 6: Eis collegiale review
 
+> It's not at all important to get it right the first time. It's vitally important to get it right the last time
 
-Er zijn een aantal regels en aandachtspunten voor het uitvoeren van code reviews.
+*Andrew Hunt and David Thomas, "he Pragmatic Programmer"*
 
-Zorg dat de review wordt gezien als een positieve kans om van elkaar te leren en niet alleen als een (verplicht) controlemechanisme.
+Laat code die je hebt geschreven altijd reviewen door een collega. Vier ogen zien meer dan twee, twee hersens zijn slimmer dan één. Bovendien kan het een stuk gemakkelijker zijn om problemen te vinden in de code van iemand anders, dan tijdens het schrijven van je eigen code. Een reviewer bekijkt de code vanuit zijn eigen kennis en ervaring en zal daardoor mogelijk problemen detecteren waar de auteur zelf niet aan dacht.
 
-Schrijf duidelijk commentaar bij elke wijziging. Het helpt de reviewer om de gedachte achter de code beter te begrijpen.
+Mensen leveren beter werk wanneer ze weten dat het door anderen wordt gereviewed. Een programmeur die weet dat de geschreven code niet veel later wordt gereviewed, zal een elegant stuk code willen schrijven. Het is leuk om trots te zijn bij het tonen van de code aan de reviewer.
 
-Baseer de review niet op persoonlijke voorkeuren. Belangrijk is om te kijken of het programma bijdraagt aan het juiste resultaat, voldoet aan de geldende standaarden en richtlijnen en aansluit bij de architectuur.
+Hoewel code review als primaire doel heeft om de kwaliteit van het stuk code dat onder handen is te verhogen, heeft review ook andere bijkomende voordelen. Als leden van een ontwikkelteam elkaars werk reviewen, zullen zij beter op de hoogte zijn van de veranderingen in de systemen. Door het kijken naar de code van anderen kan een ontwikkelaar veel leren. Het gaat niet alleen om nieuwe oplossingen, maar ook handigheden die anderen hebben ontdekt of ontwikkeld. Onderlinge kennisdeling en controle draagt bij aan een gedeelde verantwoordelijkheid en een goede samenwerking binnen het team. De programmeur die code schrijft is niet eigenaar van de code, het team is eigenaar. Elk teamlid moet zich verantwoordelijk voelen voor de kwaliteit van alle code uit het team.
 
-Het geven van feedback is soms lastig en kan zorgen voor moeilijke situaties. Zorg daarom dat de review een positieve lading heeft. Kijk dus niet alleen naar wat beter kan, maar zeker ook naar wat goed is.
+Reviewen is niet slechts een taak achteraf, als de code al geschreven is. Hoewel de review achteraf het 'formele' reviewmoment is, moet ook vooraf en tijdens de programmeertaak worden gereviewed. Vooraf, om te toetsen wat jouw collega van je oplossingsidee vindt. Tijdens, om te toetsen of jouw collega ook denkt dat je code de juiste kant op gaat. Doe de reviewer en jezelf een plezier en confronteer de reviewer niet met code waarvan de reviewer denkt "o jee wat onhandig, dit had beter helemaal anders opgezet kunnen worden, had hij/zij maar even overlegd".
 
-Het is belangrijk om reviewcommentaar (bij verbeterpunten) altijd toe te lichten en het commentaar alleen geven als het nodig is.
-Zorg dat het uitvoeren van code review gedragen wordt door het hele team en dat alle teamleden in het reviewproces participeren.
+Peer programming, waarbij programmeur en reviewer samen tegelijk de code schrijven, achter één computer, is de hoogste vorm van samenwerking en review.
 
-Een aparte form van code review is de bedachte oplossing bespreken met een collega voordat het nog gebouwd wordt. Deze manier van review helpt om onjuiste of niet optimale oplossingsrichting op tijd te detecteren.
+Er zijn een aantal aandachtspunten voor het uitvoeren van code reviews.
 
+* Zorg dat de review wordt gezien als een positieve kans om van elkaar te leren en niet alleen als een (verplicht) controlemechanisme.
 
+* Doe liefst een face-to-face overdracht van de code naar de reviewer. Gooi de code niet over de schutting naar de reviewer.
 
+* Baseer de review niet op persoonlijke voorkeuren. Belangrijk is om te kijken of het programma bijdraagt aan het juiste resultaat, voldoet aan de geldende standaarden en richtlijnen en aansluit bij de architectuur.
 
-## Pijler 6: 
+* Kijk niet alleen naar wat beter kan, maar zeker ook naar wat goed is.
 
-## Help mij, jou te helpen, ons allemaal te helpen
-## Blijf jezelf ontwikkelen en help anderen in hun ontwikkeling 
-## Blijf leren en help anderen te leren
-## Help jezelf en anderen een betere programmeur te worden
-## Verrijk naast jezelf ook anderen
-## Blijf leren
-## Blijf jezelf ontwikkelen
+* Zorg dat het uitvoeren van code review gedragen wordt door het hele team en dat alle teamleden in het reviewproces participeren.
 
-INHOUD TEXT: blijf leren, sta open voor nieuwe ideeen, help elkaar, wees tactvol naar collega's
+## Pijler 7: Houd het vak in leven
+
+Het verbeteren van de kwalitiet van de code begint bij een goede opleiding maar vooral bij voortdurend leren. Er zijn veel mogelijkheden om te leren en je vaardigheden te verbeteren.
+
+* Sta stil bij reviews van jouw eigen code. Mogelijk ontdek je bepaalde patterns, die je in de toekomst beter kan vermijden.
+
+* Documenteer je ontwerp- en technische beslissingen. Dit helpt om je keuzes achteraf (af en toe) te beoordelen.
+
+* Refactor code waar je niet blij mee bent en probeer het te verbeteren.
+
+* Probeer verschillende soorten aanpak.
+
+* Lees boeken en artikelen over software design patterns.
+
+* Ontwikkel gewoonte voor het schrijven van code van goede kwaliteit. Vermijd "quick and dirty", het leid tot slechte gewoontes.
+
+* Probeer niet alle code te tunen, alleen indien het nodig is.
+
+* Vermijd te weinig, maar ook te veel commentaar te schrijven. 
+
+* Begeleid collega’s met minder ervaring.
+
+* Draag kennis over naar anderen. Dit is een goede manier om zelf te leren.
+
+* Bezoek conferenties, congressen en seminars. Ze wakkeren de passie aan. Ze vergroten een motivatie om te willen blijven leren, maar geven ook een richting op basis van de laatste ontwikkelingen. 
+
+* Bezoek en/of neem deel aan communities op software vakmanschap gebied.
+
+* Leer verschillende tools, talen, technologieën. Daardoor verbeter je je kennis en begrip van softwareontwikkeling.
+
+* Vervul (af en toe) een andere rol. Een kijk vanuit een ander perspectief of een ander aandachtsgebied helpt om nieuwe vaardigheden te leren.
+
+* (Her)gebruik wat mogelijk is. Bedenk en schrijf niet opnieuw wat al door iemand anders is bedacht of gebouwd, maar kijk naar wat er al is met een kritische blik.
+
+## Toegift
+
+Een Nederlands stuk over codekwaliteit zou niet af zijn, als het niet werd afgesloten met een quote van Edsger Dijkstra, de eerste programmeur van Nederland en de enige Nederlandse winnaar van de Turing Award, de Nobelprijs voor de informatica.
 
 > We shall do a much better programming job, provided that we approach the task with a full appreciation of its tremendous difficulty, provided that we stick to modest and elegant programming languages, provided that we respect the intrinsic limitations of the human mind and approach the task as Very Humble Programmers
 
