@@ -84,7 +84,7 @@ Vele programmeurs zijn met de beste bedoelingen in de valkuil gestapt om code te
 
 Codeer niet meer dan wat de huidige user story vraagt. Als je de oplossing op meerdere manieren kunt coderen, kies dan de manier die later het gemakkelijkst aan te passen zal zijn.
 
-Het heeft geen zin om "nu" generieke/herbruikbare oplossingen te maken als dat veel meer tijd kost dan "nu" coderen wat "nu" nodig is. Neem in plaats daarvan "later" de ruimte om code te refactoren; op het moment dat "dan" blijkt dat zo'n generieke/herbuikbarede oplossing wenselijk is.
+Het heeft geen zin om "nu" generieke/herbruikbare oplossingen te maken als dat veel meer tijd kost dan "nu" coderen wat "nu" nodig is. Neem in plaats daarvan "later" de ruimte om code te refactoren; op het moment dat "dan" blijkt dat zo'n generieke/herbruikbare opzet wenselijk is.
 
 ## Pijler 4: Schrijf unit tests
 
