@@ -9,7 +9,8 @@
 - [Pijler 4: Schrijf unit tests](#pijler-4-schrijf-unit-tests)
 - [Pijler 5: Eet exceptions niet op](#pijler-5-eet-exceptions-niet-op)
 - [Pijler 6: Eis collegiale review](#pijler-6-eis-collegiale-review)
-- [Pijler 7: Houd het vak in leven](#pijler-7-houd-het-vak-in-leven)
+- [Pijler 7: Meet de kwaliteit van de code](#pijler-7-meet-de-kwaliteit-van-de-code)
+- [Pijler 8: Houd het vak in leven](#pijler-8-houd-het-vak-in-leven)
 - [Toegift](#toegift)
 
 <!-- /TOC -->
@@ -83,7 +84,7 @@ Vele programmeurs zijn met de beste bedoelingen in de valkuil gestapt om code te
 
 Codeer niet meer dan wat de huidige user story vraagt, en als je de oplossing op meerdere manieren kunt coderen, kies dan de manier die later het gemakkelijkst aan te passen zal zijn.
 
-Vermijd in het geheel "nu" generieke/herbruikbare oplossingen te maken als dat (veel) meer tijd kost dan simpelweg "nu" coderen wat "nu" nodig is.
+Het heeft geen zin om "nu" generieke/herbruikbare oplossingen te maken als dat (veel) meer tijd kost dan "nu" coderen wat "nu" nodig is. Neem in plaats daarvan "later" de ruimte om code te refactoren; op het moment dat "dan" blijkt dat zo'n generieke/herbuikbarede oplossing wenselijk is.
 
 ## Pijler 4: Schrijf unit tests
 
@@ -117,7 +118,11 @@ Alleen in de buitenste lagen van het systeem (scherm, batchjob, publieke API) zi
 
 > It's not at all important to get it right the first time. It's vitally important to get it right the last time
 
-*Andrew Hunt and David Thomas, "he Pragmatic Programmer"*
+*Andrew Hunt and David Thomas, "The Pragmatic Programmer"*
+
+> Om te leren van fouten moet je eerst weten dat je fouten maakt
+
+*Philo van Alexandrië*
 
 Laat code die je hebt geschreven altijd reviewen door een collega. Vier ogen zien meer dan twee, twee hersens zijn slimmer dan één. Bovendien kan het een stuk gemakkelijker zijn om problemen te vinden in de code van iemand anders, dan tijdens het schrijven van je eigen code. Een reviewer bekijkt de code vanuit zijn eigen kennis en ervaring en zal daardoor mogelijk problemen detecteren waar de auteur zelf niet aan dacht.
 
@@ -141,7 +146,45 @@ Er zijn een aantal aandachtspunten voor het uitvoeren van code reviews.
 
 * Zorg dat het uitvoeren van code review gedragen wordt door het hele team en dat alle teamleden in het reviewproces participeren.
 
-## Pijler 7: Houd het vak in leven
+## Pijler 7: Meet de kwaliteit van de code
+
+> Computer Says No
+
+*David Walliams (Carol Beer), "Little Britain"*
+
+> Leave the campground cleaner than you found it
+
+*Boyscout Rule*
+
+Veel kwaliteitsaspecten van code kunnen automatich worden gemeten, door tools als SonarQube, PyLint, TSLint.
+
+Bijvoorbeeld:
+
+* Teveel regels code binnen een code-eenheid
+
+* Te veel nesting van if-statements
+
+* Gedupliceerde code
+
+* Veelgemaakte programmeerfouten in de betreffende taal
+
+* "Code smells" - code die een grote kans heeft een bug te bevatten
+
+* Ontbreken van unittests, of verlaging van de coverage door unit tests sinds de vorige run
+
+Dergelijke tools zijn in staat om het verschil tussen runs te rapporteren. Zo kan bijvoorbeeld worden gehandhaafd dat code die al technical debt bevat, bij een volgende commit niet nog slechter wordt.
+
+Gebruik dergelijke tools tijdens coderen en reviewen en werk de gerapporteerde issues weg. Pas de boyscout rule toe; werk ook eens issues weg die eerder door anderen zijn veroorzaakt.
+
+## Pijler 8: Houd het vak in leven
+
+> Je kan een mens niets leren; je kan hem alleen helpen het zelf te ontdekken in zichzelf
+
+*Galileo Galilei*
+
+> De beste manier om iets te leren is er les in te geven
+
+*Seneca*
 
 Het verbeteren van de kwalitiet van de code begint bij een goede opleiding maar vooral bij voortdurend leren. Er zijn veel mogelijkheden om te leren en je vaardigheden te verbeteren.
 
