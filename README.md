@@ -162,7 +162,7 @@ Bijvoorbeeld:
 
 * Teveel regels code binnen een code-eenheid
 
-* Te veel nesting van if-statements
+* Teveel nesting van if-statements
 
 * Gedupliceerde code
 
