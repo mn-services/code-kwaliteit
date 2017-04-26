@@ -18,9 +18,9 @@
 ## Inleiding
 Dit document beschrijft een aantal pijlers die zullen leiden tot code van betere kwaliteit.
 
-Met codekwaliteit bedoelen we in dit document de eigenschap van code die ook wel "onderhoudbaarheid" wordt genoemd, bijvoorbeeld in ISO 25010. Die eigenschap laat zich weer onderverdelen naar: modulariteit, herbruikbaarheid, analyseerbaarheid, wijzigbaarheid en testbaarheid.
+Met codekwaliteit bedoelen we in dit document de eigenschap van code die ook wel "onderhoudbaarheid" wordt genoemd, bijvoorbeeld in ISO 25010. Die eigenschap laat zich weer onderverdelen in: modulariteit, herbruikbaarheid, analyseerbaarheid, wijzigbaarheid en testbaarheid.
 
-De termen "codekwaliteit" en "onderhoubaarheid" worden in dit document behandeld als synoniemen. Code van goede kwaliteit is onderhoudbaar. En code die onderhoudbaar is, is dus ook van goede kwaliteit.
+De termen "codekwaliteit" en "onderhoudbaarheid" worden in dit document behandeld als synoniemen. Code van goede kwaliteit is onderhoudbaar. En code die onderhoudbaar is, is dus ook van goede kwaliteit.
 
 Met codekwaliteit bedoelen we nu dus niet de functionele geschiktheid, de architecturele correctheid, de efficiency of de security van code. De behandeling van dergelijke aspecten laten we over aan andere stukken.
 
@@ -34,9 +34,9 @@ Het valt te verwachten dat onderstaande pijlers nader uitgewerkt zullen worden i
 
 *Tim Peters, "The Zen of Python"*
 
-De beste kwaliteit die een stuk code kan hebben, is dat het simpel is. Simpele code is gemakkelijk te doorgronden door andere programmeurs, gemakkelijk opnieuw te gebruiken in andere context, gemakkelijk te testen, gemakkelijk te wijzigen.
+De beste kwaliteit die een stuk code kan hebben, is dat het simpel is. Simpele code is gemakkelijk te doorgronden door andere programmeurs, gemakkelijk opnieuw te gebruiken in andere context, gemakkelijk te testen en gemakkelijk te wijzigen.
 
-Het schrijven van simpele code vereist grote vaardigheid. Analytisch vermogen en uitgebreide kennis van de programmeertaal en het programmeerplatform zijn noodzakelijk. En dan nog zijn er problemen die wezenlijk complex zijn, die zelfs voor de meest vaardige programmeur niet te vangen zijn in simpele code. Complexe code is dan onvermijdbaar maar onderneem alle moeite om die complexiteit zoveel mogelijk te beteugelen.
+Het schrijven van simpele code vereist grote vaardigheid. Analytisch vermogen en uitgebreide kennis van de programmeertaal en het programmeerplatform zijn noodzakelijk. En dan nog zijn er problemen die wezenlijk complex zijn, die zelfs voor de meest vaardige programmeur niet te vangen zijn in simpele code. Complexe code is dan onvermijdbaarm, maar onderneem alle moeite om die complexiteit zoveel mogelijk te beteugelen.
 
 Code simpel houden is een kunst maar er zijn vuistregels die helpen:
 
@@ -46,7 +46,7 @@ Code simpel houden is een kunst maar er zijn vuistregels die helpen:
 
 * Zorg dat elke methode (/procedure /functie) maar 1 ding doet, 1 duidelijke verantwoordelijkheid heeft.
 
-Generieke codeconstructies lijken in het kader van herbruikbaarheid van code vaak mooi maar zij zijn ook vaak complex. Tevens blijken generieke oplossingen vaak toch niet zo generiek te zijn wanneer ze geconfronteerd worden met nieuwe specifieke problemen. Codeer daarom alleen generieke constructies als je zeker weet dat er sprake zal zijn van hergebruik en dat dit de extra complexiteit ruimschoots waard is. Liever twee stukken simpele code die iets vergelijkbaars doen dan één stuk complexe generieke code.
+Generieke codeconstructies lijken in het kader van herbruikbaarheid van code vaak mooi, maar ze zijn ook vaak complex. Tevens blijken generieke oplossingen vaak toch niet zo generiek te zijn wanneer ze geconfronteerd worden met nieuwe specifieke problemen. Codeer daarom alleen generieke constructies als je zeker weet dat er sprake zal zijn van hergebruik en dat dit de extra complexiteit ruimschoots waard is. Liever twee stukken simpele code die iets vergelijkbaars doen, dan één stuk complexe generieke code.
 
 ## Pijler 2: Schrijf leesbare en begrijpbare code
 
@@ -62,11 +62,11 @@ Een belangrijk inzicht is dat veel meer tijd (10x meer) wordt besteed aan het le
 
 Code is begrijpelijk als de lezer van de code gemakkelijk kan begrijpen wat de programmeur die de code schreef, probeert te doen. Bij het lezen van de code moet de bedoeling van de code als vanzelf duidelijk worden aan de lezer. Gebruik daarom betekenisvolle namen voor variabelen, methodes en modules. Namen die de lading dekken. Wees consistent in naamgeving en bij het kiezen van oplossingsconstructies. Consistentie verhoogt de herkenbaarheid van namen en constructies en daarmee de begrijpelijkheid van de code.
 
-Elke programmeur wordt wel eens verleid om met een "slimmige" aanpassing een ogenschijnlijk complexe wens te implementeren in een bestaand stuk code. Hoewel dat leidt tot code die op zich "niet logisch" is, denkt de programmeur te weten dat het in de praktijk wel goed gaat, omdat de programmeur goed op de hoogte is van de codepaden die daadwerkelijk doorlopen worden. Vermijd dergelijke "clever trics" zoals Dijkstra het noemt, zij maken de code minder begrijpbaar.  
+Elke programmeur wordt wel eens verleid om met een "slimmige" aanpassing een ogenschijnlijk complexe wens te implementeren in een bestaand stuk code. Hoewel dat leidt tot code die op zich "niet logisch" is, denkt de programmeur te weten dat het in de praktijk wel goed gaat. De programmeur is immers goed op de hoogte van de codepaden die doorlopen worden. Vermijd dergelijke "clever trics" zoals Dijkstra het noemt, want die maken de code minder begrijpbaar.  
 
 Als je verwacht dat ondanks alle moeite de bedoeling van je code mogelijk toch niet duidelijk zal zijn aan lezers, verduidelijk de code dan met commentaar. Het commentaar moet met zorg up-to-date worden gehouden bij latere aanpassingen van de code.
 
-Hoewel het mogelijk (en vaak wenselijk) is om code separaat te documenteren in een ontwerptool of wiki, laat dat onverlet dat de code op zichzelf ook leesbaar en begrijpbaar moet zijn. Daarmee kan de documentatie in ontwerptool of wiki zich ook meer richten op de beschrijving van de samenhang van de code met andere stukken code.
+Hoewel het vaak wenselijk is om code separaat te documenteren in een ontwerptool of wiki, laat dat onverlet dat de code op zichzelf ook leesbaar en begrijpbaar moet zijn. Daarmee kan de documentatie in ontwerptool of wiki zich ook meer richten op de beschrijving van de samenhang van de code met andere stukken code.
 
 ## Pijler 3: Programmeer agile, één stap tegelijk
 
@@ -80,11 +80,11 @@ Hoewel het mogelijk (en vaak wenselijk) is om code separaat te documenteren in e
 
 De grote kunst van het programmeren is om "nu" alleen te coderen wat "nu" nodig maar de code zo te schrijven zodat "later" eenvoudig gecodeerd kan worden wat "later" nodig is.
 
-Vele programmeurs zijn met de beste bedoelingen in de valkuil gestapt om code te generiek en te herbruikbaar op te zetten, wat later niet bruikbaar bleek. Of in de andere valkuil, met mindere bedoelingen, om snelle code te schrijven die nu werkt maar latere aanpassingen van het systeem moeilijk zullen maken.
+Vele programmeurs zijn met de beste bedoelingen in de valkuil gestapt om code te generiek en te herbruikbaar op te zetten, om er later achter te komen dat het geen bruikbare oplossing was. Of met mindere bedoelingen in de andere valkuil, om snelle code te schrijven die nu werkt maar latere aanpassingen van het systeem moeilijk zullen maken.
 
-Codeer niet meer dan wat de huidige user story vraagt, en als je de oplossing op meerdere manieren kunt coderen, kies dan de manier die later het gemakkelijkst aan te passen zal zijn.
+Codeer niet meer dan wat de huidige user story vraagt. Als je de oplossing op meerdere manieren kunt coderen, kies dan de manier die later het gemakkelijkst aan te passen zal zijn.
 
-Het heeft geen zin om "nu" generieke/herbruikbare oplossingen te maken als dat (veel) meer tijd kost dan "nu" coderen wat "nu" nodig is. Neem in plaats daarvan "later" de ruimte om code te refactoren; op het moment dat "dan" blijkt dat zo'n generieke/herbuikbarede oplossing wenselijk is.
+Het heeft geen zin om "nu" generieke/herbruikbare oplossingen te maken als dat veel meer tijd kost dan "nu" coderen wat "nu" nodig is. Neem in plaats daarvan "later" de ruimte om code te refactoren; op het moment dat "dan" blijkt dat zo'n generieke/herbuikbarede oplossing wenselijk is.
 
 ## Pijler 4: Schrijf unit tests
 
@@ -108,11 +108,11 @@ Indien je applicatie de tand des tijds dient te doorstaan, is het nodig om gereg
 
 *Tom Kyte, "asktom.oracle.com"*
 
-Schrijf alleen foutafhandeling voor specifieke fouten die je van te voren al verwacht en die je gepast kunt afhandelen (dat laatste kan per definitie alleen voor fouten die je verwacht). Laat voor andere gevallen de exception omhoog propageren naar aanroepers zodat zij er niet omheen kunnen dat er iets mis is gegaan - en er dus ook over na moeten denken hoe ermee om te gaan.
+Schrijf alleen foutafhandeling voor specifieke fouten die je van te voren al verwacht en die je gepast kunt afhandelen. Dat laatste kan per definitie alleen voor fouten die je verwacht. Laat voor andere gevallen de exception omhoog propageren naar aanroepers zodat zij er niet omheen kunnen dat er iets mis is gegaan - en er dus ook over na moeten denken hoe ze ermee omgaan.
 
 Vermijd het gebruik van generieke foutafhandeling als "catch all" en "exception when others". Zij eten fouten op en verhullen dat er sprake was van een exception: een recept voor obscure bugs.
 
-Alleen in de buitenste lagen van het systeem (scherm, batchjob, publieke API) zijn "catch all"-achtige constructies soms niet te vermijden, om te voorkomen dat een individueel foutgeval het hele programma doet crashen. Generieke foutafhandeling kan dan worden toegepast, mits er logging wordt gedaan, zodat jouw team en jij op de hoogte worden gesteld van de "bug".
+Alleen in de buitenste lagen van het systeem (scherm, batchjob, publieke API) zijn "catch all"-achtige constructies soms niet te vermijden. Die voorkomen dat een individueel foutgeval het hele programma doet crashen. Generieke foutafhandeling kan dan worden toegepast zodat jouw team en jij op de hoogte worden gesteld van de "bug", mits er aan logging wordt gedaan.
 
 ## Pijler 6: Eis collegiale review
 
@@ -132,7 +132,7 @@ Hoewel code review als primaire doel heeft om de kwaliteit van het stuk code dat
 
 Reviewen is niet slechts een taak achteraf, als de code al geschreven is. Hoewel de review achteraf het 'formele' reviewmoment is, moet ook vooraf en tijdens de programmeertaak worden gereviewed. Vooraf, om te toetsen wat jouw collega van je oplossingsidee vindt. Tijdens, om te toetsen of jouw collega ook denkt dat je code de juiste kant op gaat. Doe de reviewer en jezelf een plezier en confronteer de reviewer niet met code waarvan de reviewer denkt "o jee wat onhandig, dit had beter helemaal anders opgezet kunnen worden, had hij/zij maar even overlegd".
 
-Peer programming, waarbij programmeur en reviewer samen tegelijk de code schrijven, achter één computer, is de hoogste vorm van samenwerking en review.
+Peer programming, waarbij programmeur en reviewer samen tegelijk de code schrijven achter één computer, is de hoogste vorm van samenwerking en review.
 
 Er zijn een aantal aandachtspunten voor het uitvoeren van code reviews.
 
@@ -188,7 +188,7 @@ Gebruik dergelijke tools tijdens coderen en reviewen en werk de gerapporteerde i
 
 Het verbeteren van de kwalitiet van de code begint bij een goede opleiding maar vooral bij voortdurend leren. Er zijn veel mogelijkheden om te leren en je vaardigheden te verbeteren.
 
-* Sta stil bij reviews van jouw eigen code. Mogelijk ontdek je bepaalde patterns, die je in de toekomst beter kan vermijden.
+* Sta stil bij reviews van jouw eigen code. Mogelijk ontdek je bepaalde patterns die je in de toekomst beter kan vermijden.
 
 * Documenteer je ontwerp- en technische beslissingen. Dit helpt om je keuzes achteraf (af en toe) te beoordelen.
 
@@ -198,7 +198,7 @@ Het verbeteren van de kwalitiet van de code begint bij een goede opleiding maar 
 
 * Lees boeken en artikelen over software design patterns.
 
-* Ontwikkel gewoonte voor het schrijven van code van goede kwaliteit. Vermijd "quick and dirty", het leid tot slechte gewoontes.
+* Ontwikkel een gewoonte voor het schrijven van code van goede kwaliteit. Vermijd "quick and dirty", want dat leidt tot slechte gewoontes.
 
 * Probeer niet alle code te tunen, alleen indien het nodig is.
 
@@ -208,7 +208,7 @@ Het verbeteren van de kwalitiet van de code begint bij een goede opleiding maar 
 
 * Draag kennis over naar anderen. Dit is een goede manier om zelf te leren.
 
-* Bezoek conferenties, congressen en seminars. Ze wakkeren de passie aan. Ze vergroten een motivatie om te willen blijven leren, maar geven ook een richting op basis van de laatste ontwikkelingen. 
+* Bezoek conferenties, congressen en seminars. Ze wakkeren de passie aan. Ze vergroten een motivatie om te willen blijven leren, en geven ook een richting op basis van de laatste ontwikkelingen. 
 
 * Bezoek en/of neem deel aan communities op software vakmanschap gebied.
 
